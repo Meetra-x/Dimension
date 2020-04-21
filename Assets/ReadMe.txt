@@ -1,0 +1,1 @@
+Aspect ratio is 16:9

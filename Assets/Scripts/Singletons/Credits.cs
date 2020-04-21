@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Credits : MonoBehaviour
 {
@@ -23,17 +24,17 @@ public class Credits : MonoBehaviour
     public float CreditsIncrease { get; set; }
     public float CreditsDecrease { get; set; }
 
-    private Text CreditsAmountText;
+    private TextMeshProUGUI CreditsAmountText;
 
     // Start is called before the first frame update
     void Start()
     {
-        CreditsAmountText = GameObject.FindGameObjectWithTag(StringTags.CreditsAmountTag).GetComponent<Text>();
+        CreditsAmountText = GameObject.FindGameObjectWithTag(StringTags.CreditsAmountTag).GetComponent<TextMeshProUGUI>();
     }
 
     public void IncreaseCreditsAmount(float _amount)
     {
-        CreditsAmount += _amount;
-        CreditsAmountText.text = CreditsAmount.ToString();
+        CreditsAmount += _amount * 100;
+        CreditsAmountText.text = CreditsAmount.ToString("n0");
     }
 }

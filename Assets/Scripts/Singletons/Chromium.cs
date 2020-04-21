@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Chromium : MonoBehaviour
 {
@@ -23,12 +24,12 @@ public class Chromium : MonoBehaviour
     public float ChromiumIncrease { get; set; }
     public float ChromiumDecrease { get; set; }
 
-    private Text ChromiumAmountText;
+    private TextMeshProUGUI ChromiumAmountText;
 
     // Start is called before the first frame update
     void Start()
     {
-        ChromiumAmountText = GameObject.FindGameObjectWithTag(StringTags.ChromiumAmountTag).GetComponent<Text>();
+        ChromiumAmountText = GameObject.FindGameObjectWithTag(StringTags.ChromiumAmountTag).GetComponent<TextMeshProUGUI>();
     }
 
     public void IncreaseChromiumAmount(float _amount)
