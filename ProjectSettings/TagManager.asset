@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MetalAmountText
   - ChromiumAmountText
+  - CreditsAmountText
   layers:
   - Default
   - TransparentFX
