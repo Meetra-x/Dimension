@@ -4,5 +4,5 @@ using UnityEngine;
 
 public static class StringTags
 {
-    public static string MetalAmountTag = "MetalAmountText";
+    public static string ChromiumAmountTag = "ChromiumAmountText";
 }

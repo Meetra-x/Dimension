@@ -16,8 +16,8 @@ public class ButtonManager : MonoBehaviour
         
     }
 
-    public void IncreaseMetal()
+    public void IncreaseChromium()
     {
-        Metal.instance.IncreaseMetalAmount(1);
+        Chromium.instance.IncreaseChromiumAmount(1);
     }
 }
