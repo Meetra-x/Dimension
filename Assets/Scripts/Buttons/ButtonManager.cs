@@ -20,4 +20,9 @@ public class ButtonManager : MonoBehaviour
     {
         Chromium.instance.IncreaseChromiumAmount(1);
     }
+
+    public void IncreaseCredits()
+    {
+        Credits.instance.IncreaseCreditsAmount(1);
+    }
 }
