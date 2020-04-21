@@ -31,15 +31,9 @@ public class Metal : MonoBehaviour
         MetalAmountText = GameObject.FindGameObjectWithTag(StringTags.MetalAmountTag).GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncreaseMetalAmount(float _amount)
     {
+        MetalAmount += _amount;
         MetalAmountText.text = MetalAmount.ToString();
     }
-
-    public void IncreaseMetalAmount(float amount)
-    {
-        MetalAmount += amount;
-    }
-
 }
