@@ -25,4 +25,24 @@ public class ButtonManager : MonoBehaviour
     {
         Credits.instance.IncreaseCreditsAmount(1);
     }
+
+    public void IncreaseWorkRobot()
+    {
+        Robots.instance.AssignRobot(RobotJob.Work);
+    } 
+    
+    public void IncreaseMineRobot()
+    {
+        Robots.instance.AssignRobot(RobotJob.Mining);
+    }
+
+    public void DecreaseWorkRobot()
+    {
+        Robots.instance.UnassignRobot(RobotJob.Work);
+    }
+
+    public void DecreaseMineRobot()
+    {
+        Robots.instance.UnassignRobot(RobotJob.Mining);
+    }
 }

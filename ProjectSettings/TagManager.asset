@@ -7,6 +7,10 @@ TagManager:
   - MetalAmountText
   - ChromiumAmountText
   - CreditsAmountText
+  - RobotsMaxAmountText
+  - RobotsFreeAmountText
+  - RobotsWorkAmountText
+  - RobotsMineAmountText
   layers:
   - Default
   - TransparentFX
