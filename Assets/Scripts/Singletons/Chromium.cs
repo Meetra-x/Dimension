@@ -4,56 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Chromium : MonoBehaviour
+public partial class Resources
 {
-
-    #region Singleton
-
-    public static Chromium instance;
-
-    private void Awake()
+    public class Chromium
     {
-        instance = this;
-    }
+        public float ChromiumAmount { get; set; }
 
-    #endregion
+        public float ChromiumIncrease { get; set; }
+        public float ChromiumDecrease { get; set; }    
 
-
-    public float ChromiumAmount { get; set; }
-
-    public float ChromiumIncrease { get; set; }
-    public float ChromiumDecrease { get; set; }
-
-    [SerializeField]
-    private TextMeshProUGUI ChromiumAmountText;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ChromiumAmount = 0;
-
-        if (ChromiumAmountText != null)
+        #region Shop Funcs
+        public void IncreaseChromiumAmount(float _amount)
         {
-            ChromiumAmountText.text = ChromiumAmount.ToString();
+            ChromiumAmount += _amount;
+            Messenger.Broadcast<float>(Events.Event_OnUpdateChromiumText, ChromiumAmount);
         }
-        else { Debug.LogWarning("RobotsMaxAmountText is null"); }
-    }
+        public void DecreaseChromiumAmount(float _amount)
+        {
+            ChromiumAmount -= _amount;
+            Messenger.Broadcast<float>(Events.Event_OnUpdateChromiumText, ChromiumAmount);
+        }
+        public bool CanPurchaseWithChromium(float _amount)
+        {
+            return ChromiumAmount >= _amount;
+        }
+        #endregion
 
-    #region Shop Funcs
-    public void IncreaseChromiumAmount(float _amount)
-    {
-        ChromiumAmount += _amount;
-        ChromiumAmountText.text = ChromiumAmount.ToString();
     }
-    public void DecreaseChromiumAmount(float _amount)
-    {
-        ChromiumAmount -= _amount;
-        ChromiumAmountText.text = ChromiumAmount.ToString();
-    }
-    public bool CanPurchaseWithChromium(float _amount)
-    {
-        return ChromiumAmount >= _amount;
-    }
-    #endregion
-
 }

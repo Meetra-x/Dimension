@@ -27,11 +27,11 @@ public class Shop : MonoBehaviour
         //Work out the cost in credits
         float cost = _amount * _ratio;
         //Check can purchase
-        if (Credits.instance.CanPurchaseWithCredits(cost))
+        if (Resources.instance.credits.CanPurchaseWithCredits(cost))
         {
             //Actually purchase
-            Credits.instance.DecreaseCreditsAmount(cost);
-            Chromium.instance.IncreaseChromiumAmount(_amount);
+            Resources.instance.credits.DecreaseCreditsAmount(cost);
+            Resources.instance.chromium.IncreaseChromiumAmount(_amount);
         }
     }
 
@@ -41,12 +41,11 @@ public class Shop : MonoBehaviour
         float creditCost = _amount * _ratio;
         float chromiumCost = _amount * _ratio;
         //Check can purchase
-        if (Credits.instance.CanPurchaseWithCredits(creditCost) && Chromium.instance.CanPurchaseWithChromium(chromiumCost));
-        {          
+        if (Resources.instance.credits.CanPurchaseWithCredits(creditCost) && Resources.instance.chromium.CanPurchaseWithChromium(chromiumCost))
+        {
             //Actually purchase
-            Credits.instance.DecreaseCreditsAmount(creditCost);
-            Chromium.instance.DecreaseChromiumAmount(chromiumCost);
-            Robots.instance.IncreaseRobotsAmount(1);
+            Resources.instance.PurchaseCreditsAndChromium(creditCost, chromiumCost);
+            Resources.instance.robots.IncreaseRobotsAmount(1);
         }
     }
 

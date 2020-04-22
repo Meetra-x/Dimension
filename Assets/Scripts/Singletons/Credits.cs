@@ -4,52 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Credits : MonoBehaviour
+public partial class Resources
 {
-
-    #region Singleton
-
-    public static Credits instance;
-
-    private void Awake()
+    public class Credits
     {
-        instance = this;
+
+        public float CreditsAmount { get; set; }
+
+        public float CreditsIncrease { get; set; }
+        public float CreditsDecrease { get; set; }
+
+        #region Shop Funcs
+
+        public void IncreaseCreditsAmount(float _amount)
+        {
+            CreditsAmount += _amount;
+            Messenger.Broadcast<float>(Events.Event_OnUpdateCreditsText, CreditsAmount);
+        }
+
+        public void DecreaseCreditsAmount(float _amount)
+        {
+            CreditsAmount -= _amount;
+            Messenger.Broadcast<float>(Events.Event_OnUpdateCreditsText, CreditsAmount);
+        }
+
+        public bool CanPurchaseWithCredits(float _amount)
+        {
+            return CreditsAmount >= _amount;
+        }
+
+        #endregion
     }
-
-    #endregion
-
-
-    public float CreditsAmount { get; set; }
-
-    public float CreditsIncrease { get; set; }
-    public float CreditsDecrease { get; set; }
-
-    private TextMeshProUGUI CreditsAmountText;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        CreditsAmountText = GameObject.FindGameObjectWithTag(StringTags.CreditsAmountTag).GetComponent<TextMeshProUGUI>();
-    }
-
-    #region Shop Funcs
-
-    public void IncreaseCreditsAmount(float _amount)
-    {
-        CreditsAmount += _amount;
-        CreditsAmountText.text = CreditsAmount.ToString("n0");
-    }
-
-    public void DecreaseCreditsAmount(float _amount)
-    {
-        CreditsAmount -= _amount;
-        CreditsAmountText.text = CreditsAmount.ToString("n0");
-    }
-
-    public bool CanPurchaseWithCredits(float _amount)
-    {
-        return CreditsAmount >= _amount;
-    }
-
-    #endregion
 }
