@@ -10,17 +10,6 @@ public class ButtonManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void IncreaseChromium()
-    {
-        Chromium.instance.IncreaseChromiumAmount(1);
-    }
-
     public void IncreaseCredits()
     {
         Credits.instance.IncreaseCreditsAmount(1);
