@@ -34,7 +34,7 @@ public class Credits : MonoBehaviour
 
     public void IncreaseCreditsAmount(float _amount)
     {
-        CreditsAmount += _amount * 100;
+        CreditsAmount += _amount;
         CreditsAmountText.text = CreditsAmount.ToString("n0");
     }
 }
