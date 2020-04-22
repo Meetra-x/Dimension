@@ -12,7 +12,7 @@ public class ButtonManager : MonoBehaviour
 
     public void IncreaseCredits()
     {
-        Resources.instance.credits.IncreaseCreditsAmount(1);
+        Resources.instance.IncreaseCreditsAmount(1);
     }
 
     public void IncreaseWorkRobot()

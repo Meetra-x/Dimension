@@ -73,8 +73,48 @@ public partial class Resources : MonoBehaviour
 
     public void PurchaseCreditsAndChromium(float _creditAmount, float _chromiumAmount)
     {
-        credits.DecreaseCreditsAmount(_creditAmount);
-        chromium.DecreaseChromiumAmount(_chromiumAmount);
+        DecreaseCreditsAmount(_creditAmount);
+        DecreaseChromiumAmount(_chromiumAmount);
     }
+
+
+
+    #region Credit Functions
+
+    public void IncreaseCreditsAmount(float _amount)
+    {
+        credits.CreditsAmount += _amount;
+        Messenger.Broadcast<float>(Events.Event_OnUpdateCreditsText, credits.CreditsAmount);
+    }
+
+    public void DecreaseCreditsAmount(float _amount)
+    {
+        credits.CreditsAmount -= _amount;
+        Messenger.Broadcast<float>(Events.Event_OnUpdateCreditsText, credits.CreditsAmount);
+    }
+
+    public bool CanPurchaseWithCredits(float _amount)
+    {
+        return credits.CreditsAmount >= _amount;
+    }
+
+    #endregion
+
+    #region Chromium Functions
+    public void IncreaseChromiumAmount(float _amount)
+    {
+        chromium.ChromiumAmount += _amount;
+        Messenger.Broadcast<float>(Events.Event_OnUpdateChromiumText, chromium.ChromiumAmount);
+    }
+    public void DecreaseChromiumAmount(float _amount)
+    {
+        chromium.ChromiumAmount -= _amount;
+        Messenger.Broadcast<float>(Events.Event_OnUpdateChromiumText, chromium.ChromiumAmount);
+    }
+    public bool CanPurchaseWithChromium(float _amount)
+    {
+        return chromium.ChromiumAmount >= _amount;
+    }
+    #endregion
 
 }
