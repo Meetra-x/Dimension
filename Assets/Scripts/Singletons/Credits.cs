@@ -32,9 +32,24 @@ public class Credits : MonoBehaviour
         CreditsAmountText = GameObject.FindGameObjectWithTag(StringTags.CreditsAmountTag).GetComponent<TextMeshProUGUI>();
     }
 
+    #region Shop Funcs
+
     public void IncreaseCreditsAmount(float _amount)
     {
         CreditsAmount += _amount;
         CreditsAmountText.text = CreditsAmount.ToString("n0");
     }
+
+    public void DecreaseCreditsAmount(float _amount)
+    {
+        CreditsAmount -= _amount;
+        CreditsAmountText.text = CreditsAmount.ToString("n0");
+    }
+
+    public bool CanPurchaseWithCredits(float _amount)
+    {
+        return CreditsAmount >= _amount;
+    }
+
+    #endregion
 }

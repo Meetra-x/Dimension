@@ -30,18 +30,17 @@ public class Robots : MonoBehaviour
     public int MineRobots { get; set; }
 
     //UI element vars
-    [FoldoutGroup("Reource Texts"), SerializeField]
+    [FoldoutGroup("Resource Texts"), SerializeField]
     private TextMeshProUGUI RobotsMaxAmountText;
 
-    [FoldoutGroup("Reource Texts"), SerializeField]
+    [FoldoutGroup("Resource Texts"), SerializeField]
     private TextMeshProUGUI RobotsFreeAmountText;
     
-    [FoldoutGroup("Reource Texts"), SerializeField]
+    [FoldoutGroup("Resource Texts"), SerializeField]
     private TextMeshProUGUI RobotsWorkAmountText;
     
-    [FoldoutGroup("Reource Texts"), SerializeField]
+    [FoldoutGroup("Resource Texts"), SerializeField]
     private TextMeshProUGUI RobotsMineAmountText;
-
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +72,6 @@ public class Robots : MonoBehaviour
             RobotsMineAmountText.text = MineRobots.ToString();
         }
         else { Debug.LogWarning("RobotsMineAmountText is null"); }
-
     }
 
     public void IncreaseRobotsAmount(float _amount)

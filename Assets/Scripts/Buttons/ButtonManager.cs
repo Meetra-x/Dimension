@@ -45,4 +45,14 @@ public class ButtonManager : MonoBehaviour
     {
         Robots.instance.UnassignRobot(RobotJob.Mining);
     }
+
+    public void ShopBuyChromium()
+    {
+        Shop.instance.BuyChromium(1);
+    }
+
+    public void ShopBuyRobot()
+    {
+        Shop.instance.BuyRobot(1);
+    }
 }
