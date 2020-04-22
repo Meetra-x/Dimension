@@ -19,6 +19,7 @@ public class Robots : MonoBehaviour
     #endregion
 
 
+    //Robot assigning
     public float RobotsMaxAmount { get; set; }
 
     public float AssignedRobots { get; set; }
@@ -26,10 +27,12 @@ public class Robots : MonoBehaviour
     public float RobotsFreeAmount { get; set; }
 
 
+    //Job robot amounts
     public int WorkRobots { get; set; }
     public int MineRobots { get; set; }
 
 
+    //UI element vars
     private TextMeshProUGUI RobotsMaxAmountText;
     private TextMeshProUGUI RobotsFreeAmountText;
     private TextMeshProUGUI RobotsWorkAmountText;
@@ -38,9 +41,12 @@ public class Robots : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //For testing
         RobotsFreeAmount = 1;
         RobotsMaxAmount = 1;
 
+
+        //Initilise the GameObjects
         RobotsMaxAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsMaxAmountTag).GetComponent<TextMeshProUGUI>();
         RobotsMaxAmountText.text = RobotsMaxAmount.ToString();
         RobotsFreeAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsFreeAmountTag).GetComponent<TextMeshProUGUI>();
