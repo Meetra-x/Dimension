@@ -1028,6 +1028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d59fab17b7732c49bcc07b51a1e67ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RobotsMaxAmountText: {fileID: 238839639}
+  RobotsFreeAmountText: {fileID: 1577348807}
+  RobotsWorkAmountText: {fileID: 188011430}
+  RobotsMineAmountText: {fileID: 0}
 --- !u!1 &1577348805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1967077394
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1500,6 +1504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669228379680489808, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3669228379680489809, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
         type: 3}

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Sirenix.OdinInspector;
 
 public class Robots : MonoBehaviour
 {
-
     #region Singleton
 
     public static Robots instance;
@@ -18,7 +18,6 @@ public class Robots : MonoBehaviour
 
     #endregion
 
-
     //Robot assigning
     public float RobotsMaxAmount { get; set; }
 
@@ -26,17 +25,23 @@ public class Robots : MonoBehaviour
 
     public float RobotsFreeAmount { get; set; }
 
-
     //Job robot amounts
     public int WorkRobots { get; set; }
     public int MineRobots { get; set; }
 
-
     //UI element vars
+    [FoldoutGroup("Reource Texts"), SerializeField]
     private TextMeshProUGUI RobotsMaxAmountText;
+
+    [FoldoutGroup("Reource Texts"), SerializeField]
     private TextMeshProUGUI RobotsFreeAmountText;
+    
+    [FoldoutGroup("Reource Texts"), SerializeField]
     private TextMeshProUGUI RobotsWorkAmountText;
+    
+    [FoldoutGroup("Reource Texts"), SerializeField]
     private TextMeshProUGUI RobotsMineAmountText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,15 +50,30 @@ public class Robots : MonoBehaviour
         RobotsFreeAmount = 1;
         RobotsMaxAmount = 1;
 
-
         //Initilise the GameObjects
-        RobotsMaxAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsMaxAmountTag).GetComponent<TextMeshProUGUI>();
-        RobotsMaxAmountText.text = RobotsMaxAmount.ToString();
-        RobotsFreeAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsFreeAmountTag).GetComponent<TextMeshProUGUI>();
-        RobotsFreeAmountText.text = RobotsFreeAmount.ToString();
-        RobotsWorkAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsWorkAmountTag).GetComponent<TextMeshProUGUI>();
-        RobotsWorkAmountText.text = WorkRobots.ToString();
-        //RobotsMineAmountText = GameObject.FindGameObjectWithTag(StringTags.RobotsMineAmountTag).GetComponent<TextMeshProUGUI>();
+        if (RobotsMaxAmountText != null)
+        {
+            RobotsMaxAmountText.text = RobotsMaxAmount.ToString();
+        } else { Debug.LogWarning("RobotsMaxAmountText is null"); }
+
+        if (RobotsFreeAmountText != null)
+        {
+            RobotsFreeAmountText.text = RobotsFreeAmount.ToString();
+        }
+        else { Debug.LogWarning("RobotsFreeAmountText is null"); }
+
+        if (RobotsWorkAmountText != null)
+        {
+            RobotsWorkAmountText.text = WorkRobots.ToString();
+        }
+        else { Debug.LogWarning("RobotsWorkAmountText is null"); }
+
+        if (RobotsMineAmountText != null)
+        {
+            RobotsMineAmountText.text = MineRobots.ToString();
+        }
+        else { Debug.LogWarning("RobotsMineAmountText is null"); }
+
     }
 
     public void IncreaseRobotsAmount(float _amount)
@@ -110,5 +130,4 @@ public class Robots : MonoBehaviour
             }
         }
     }
-
 }
