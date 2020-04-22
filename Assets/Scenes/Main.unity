@@ -209,70 +209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 25208631, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 25208631, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 25208631, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 25208631, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 783529106, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 613289515}
-    - target: {fileID: 783529106, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: IncreaseCreditsAmount
-      objectReference: {fileID: 0}
-    - target: {fileID: 783529106, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 783529106, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035524699, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035524699, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035524699, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048805807, guid: a5ac2cd4e62e0a44fa3db5262a0567a2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: cf886e3b1cbd1204c9c00e35518070d4,
-        type: 3}
-    - target: {fileID: 3669228378718106835, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3669228378718106835, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3669228378718106835, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3669228379680489809, guid: a5ac2cd4e62e0a44fa3db5262a0567a2,
         type: 3}
       propertyPath: m_Name
