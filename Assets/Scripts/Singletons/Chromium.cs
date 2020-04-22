@@ -4,37 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Chromium : MonoBehaviour
+public partial class Resources
 {
-
-    #region Singleton
-
-    public static Chromium instance;
-
-    private void Awake()
+    public class Chromium
     {
-        instance = this;
-    }
+        public float ChromiumAmount { get; set; }
 
-    #endregion
+        public float ChromiumIncrease { get; set; }
+        public float ChromiumDecrease { get; set; }    
 
 
-    public float ChromiumAmount { get; set; }
 
-    public float ChromiumIncrease { get; set; }
-    public float ChromiumDecrease { get; set; }
-
-    private TextMeshProUGUI ChromiumAmountText;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ChromiumAmountText = GameObject.FindGameObjectWithTag(StringTags.ChromiumAmountTag).GetComponent<TextMeshProUGUI>();
-    }
-
-    public void IncreaseChromiumAmount(float _amount)
-    {
-        ChromiumAmount += _amount;
-        ChromiumAmountText.text = ChromiumAmount.ToString();
     }
 }

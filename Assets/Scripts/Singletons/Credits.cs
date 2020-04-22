@@ -4,37 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Credits : MonoBehaviour
+public partial class Resources
 {
-
-    #region Singleton
-
-    public static Credits instance;
-
-    private void Awake()
+    public class Credits
     {
-        instance = this;
-    }
 
-    #endregion
+        public float CreditsAmount { get; set; }
+
+        public float CreditsIncrease { get; set; }
+        public float CreditsDecrease { get; set; }
 
 
-    public float CreditsAmount { get; set; }
-
-    public float CreditsIncrease { get; set; }
-    public float CreditsDecrease { get; set; }
-
-    private TextMeshProUGUI CreditsAmountText;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        CreditsAmountText = GameObject.FindGameObjectWithTag(StringTags.CreditsAmountTag).GetComponent<TextMeshProUGUI>();
-    }
-
-    public void IncreaseCreditsAmount(float _amount)
-    {
-        CreditsAmount += _amount;
-        CreditsAmountText.text = CreditsAmount.ToString("n0");
     }
 }

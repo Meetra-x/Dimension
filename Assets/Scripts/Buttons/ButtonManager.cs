@@ -10,39 +10,38 @@ public class ButtonManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void IncreaseChromium()
-    {
-        Chromium.instance.IncreaseChromiumAmount(1);
-    }
-
     public void IncreaseCredits()
     {
-        Credits.instance.IncreaseCreditsAmount(1);
+        Resources.instance.IncreaseCreditsAmount(1);
     }
 
     public void IncreaseWorkRobot()
     {
-        Robots.instance.AssignRobot(RobotJob.Work);
+        Resources.instance.robots.AssignRobot(RobotJob.Work);
     } 
     
     public void IncreaseMineRobot()
     {
-        Robots.instance.AssignRobot(RobotJob.Mining);
+        Resources.instance.robots.AssignRobot(RobotJob.Mining);
     }
 
     public void DecreaseWorkRobot()
     {
-        Robots.instance.UnassignRobot(RobotJob.Work);
+        Resources.instance.robots.UnassignRobot(RobotJob.Work);
     }
 
     public void DecreaseMineRobot()
     {
-        Robots.instance.UnassignRobot(RobotJob.Mining);
+        Resources.instance.robots.UnassignRobot(RobotJob.Mining);
+    }
+
+    public void ShopBuyChromium()
+    {
+        Shop.instance.BuyChromium(1);
+    }
+
+    public void ShopBuyRobot()
+    {
+        Shop.instance.BuyRobot(1);
     }
 }
