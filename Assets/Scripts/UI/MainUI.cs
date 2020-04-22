@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Sirenix.OdinInspector;
 public class MainUI : MonoBehaviour
 {
 
 
 
-    [SerializeField]
+    [FoldoutGroup("Resource Text"), SerializeField]
     public TextMeshProUGUI ChromiumAmountText;
 
-    [SerializeField]
+    [FoldoutGroup("Resource Text"), SerializeField]
     public TextMeshProUGUI CreditsAmountText;
 
 

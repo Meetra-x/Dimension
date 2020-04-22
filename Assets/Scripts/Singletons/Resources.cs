@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Sirenix.OdinInspector;
 
 public partial class Resources : MonoBehaviour
 {
@@ -24,11 +25,11 @@ public partial class Resources : MonoBehaviour
 
     #endregion
 
-    [SerializeField]
+    [FoldoutGroup("Resource Classes"), SerializeField]
     public Credits credits = new Credits();
-    [SerializeField]
+    [FoldoutGroup("Resource Classes"), SerializeField]
     public Chromium chromium = new Chromium();
-    [SerializeField]
+    [FoldoutGroup("Resource Classes"), SerializeField]
     public Robots robots = new Robots();
 
 
