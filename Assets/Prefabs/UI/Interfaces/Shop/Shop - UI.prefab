@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 2751546443616703268}
   - component: {fileID: 2751546443616703269}
   - component: {fileID: 2751546443616703290}
+  - component: {fileID: 604469775}
   m_Layer: 5
   m_Name: Shop - UI
   m_TagString: Untagged
@@ -278,6 +279,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!95 &604469775
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751546443616703291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a285903bd9abfc4ca5eb72ad34c0a2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2751546443663175773
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +468,7 @@ GameObject:
   - component: {fileID: 2751546443757573925}
   - component: {fileID: 2751546443757573927}
   - component: {fileID: 2751546443757573924}
+  - component: {fileID: 9093209596234691190}
   m_Layer: 5
   m_Name: TitleBar
   m_TagString: Untagged
@@ -512,6 +533,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &9093209596234691190
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751546443757573946}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2751546443818065363
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +785,7 @@ GameObject:
   - component: {fileID: 2751546444671750592}
   - component: {fileID: 2751546444671750594}
   - component: {fileID: 2751546444671750595}
+  - component: {fileID: 2867232164158313231}
   m_Layer: 5
   m_Name: HeaderBar
   m_TagString: Untagged
@@ -815,6 +849,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &2867232164158313231
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751546444671750593}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2751546444707030722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,10 +1214,10 @@ RectTransform:
   m_Father: {fileID: 2751546443583253348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1100}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2751546445548521038
 CanvasRenderer:
@@ -1216,10 +1262,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2751546443691653359}
     m_Modifications:
+    - target: {fileID: 2198913461216794381, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem5
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -1441,6 +1492,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
 --- !u!224 &4416170244162145537 stripped
@@ -1456,10 +1512,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2751546443691653359}
     m_Modifications:
+    - target: {fileID: 2198913461216794381, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem2
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -1681,6 +1742,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
 --- !u!224 &3512708749878866309 stripped
@@ -1696,10 +1762,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2751546443691653359}
     m_Modifications:
+    - target: {fileID: 2198913461216794381, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem4
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -1921,6 +1992,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
 --- !u!224 &3001709904120636262 stripped
@@ -1939,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem1
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -2051,6 +2127,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
 --- !u!224 &2751546444481698521 stripped
@@ -2066,10 +2147,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2751546443691653359}
     m_Modifications:
+    - target: {fileID: 2198913461216794381, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem6
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -2291,6 +2377,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
 --- !u!224 &8181058624176874208 stripped
@@ -2306,10 +2397,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2751546443691653359}
     m_Modifications:
+    - target: {fileID: 2198913461216794381, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480712, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
       propertyPath: m_Name
-      value: ShopItem
+      value: ShopItem3
       objectReference: {fileID: 0}
     - target: {fileID: 2198913461217480719, guid: c1293ed3e1c56554389bbd0f117285d8,
         type: 3}
@@ -2530,6 +2626,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090503206443334309, guid: c1293ed3e1c56554389bbd0f117285d8,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1293ed3e1c56554389bbd0f117285d8, type: 3}
