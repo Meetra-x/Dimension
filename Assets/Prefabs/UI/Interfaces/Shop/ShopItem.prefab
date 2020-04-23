@@ -89,6 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2198913461217480719}
+  - component: {fileID: 5090503206443334309}
   m_Layer: 5
   m_Name: ShopItem
   m_TagString: Untagged
@@ -117,6 +118,18 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 484.9, y: 767.7}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!225 &5090503206443334309
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2198913461217480712}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2198913461395820838
 GameObject:
   m_ObjectHideFlags: 0
